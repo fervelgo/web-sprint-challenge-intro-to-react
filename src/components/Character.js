@@ -17,15 +17,29 @@ const StyledComp = styled.div `
         width: 100%;
     }
 
-`
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background-color: 'white';
+    }
 
-//const StyledButton = styled.button ``
+`
+const StyledButton = styled.button `
+    border: solid white;
+    border-radius: 2px;
+    background-color: white;
+    color: black;
+    &:hover {
+        transform: scale(1.2);
+    }
+
+
+`
 
 const Character = ({info, action}) => {
     return (
         <StyledComp>
             {info.name}
-            <button onClick={()=> action(info.name)}></button>
+            <StyledButton onClick={()=> action(info.name)}>Who dis?</StyledButton>
         </StyledComp>
     )
 }
