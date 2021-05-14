@@ -38,7 +38,7 @@ useEffect(()=> {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">Star Wars Characters</h1>
         {
           characters.map((nm)=>{
             return <Character key={nm.name} info={nm} action={openInfo}/>
